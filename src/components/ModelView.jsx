@@ -1,4 +1,6 @@
-import { Html, OrbitControls, PerspectiveCamera, View } from "@react-three/drei"
+/* eslint-disable react/no-unknown-property */
+/* eslint-disable react/prop-types */
+import { OrbitControls, PerspectiveCamera, View } from "@react-three/drei"
 
 import * as THREE from 'three'
 import Lights from './Lights';
