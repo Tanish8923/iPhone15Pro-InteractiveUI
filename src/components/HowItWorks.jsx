@@ -1,7 +1,7 @@
 import { chipImg, frameImg, frameVideo } from '../utils'
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap';
-import { animateWithGsap } from '../utils/animations';
+// import { animateWithGsap } from '../utils/animations';
 import { useRef } from 'react';
 
 const HowItWorks = () => {
@@ -19,12 +19,22 @@ const HowItWorks = () => {
       ease: 'power2.inOut'
     })
 
-    animateWithGsap('.g_fadeIn', {
+    gsap.to('.g_fadeIn', {
+      scrollTrigger: {
+        trigger: '.g_fadeIn',
+        start: '20% bottom'
+      },
       opacity: 1,
       y: 0,
       duration: 1,
       ease: 'power2.inOut'
     })
+    // animateWithGsap('.g_fadeIn', {
+    //   opacity: 1,
+    //   y: 0,
+    //   duration: 1,
+    //   ease: 'power2.inOut'
+    // })
   }, []);
 
   return (
